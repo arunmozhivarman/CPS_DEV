@@ -28,7 +28,7 @@ public interface PromotionService {
 	@ResponseBody
 	Promotion getPromotionById(@PathVariable(name="promotionId") String promotionId);
 		
-	@RequestMapping(value = "/getALLPromotions")
+	@RequestMapping(value = "/promotions/getALLPromotions")
 	@ResponseBody
 	List<Promotion> getALLPromotions();
 }

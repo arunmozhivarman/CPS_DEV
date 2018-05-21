@@ -37,7 +37,7 @@ public class PromotionAPIClient {
 	@ResponseBody
 	public Promotions getPromotionById(){
 		Promotions promotions = new Promotions();
-		promotions.setPromotions( getPromotionService().getALLPromotions());
+		promotions.setPromotions(getPromotionService().getALLPromotions());
 		return promotions;
 	}
 	
