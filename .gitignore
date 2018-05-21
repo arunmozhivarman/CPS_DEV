@@ -1,3 +1,8 @@
 /CloudNativePromotionService/.metadata
 /CloudNativePromotionService/.recommenders
 /CloudNativePromotionService/.settings
+/CloudNativePromotionService/microservices-config-server/bin
+/CloudNativePromotionService/microservices-edge-server/bin
+/CloudNativePromotionService/microservices-eureka-registry-server/bin
+/CloudNativePromotionService/microservices-promotions/bin
+/CloudNativePromotionService/microservices-promotions-client/bin
