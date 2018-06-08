@@ -1,0 +1,28 @@
+<div style="text-align: center">
+	<h1>Promotion service</h1>
+
+	<div>
+		<button (click)="getAllPromotions()">Promotions List</button>
+		<!--  {{ promotions | json }} -->
+
+		<div *ngIf="promotions" style="text-align: left">
+			<h2>List of Promotions</h2>
+			<ul>
+				<li *ngFor="let promotions of promotions"
+					(click)="getPromotionById(promotions.id)"
+					[class.selected]="promotions.id === promotion.id"><span>{{promotions.name}}
+						- {{promotions.id}}</span></li>
+			</ul>
+		</div>
+		<div *ngIf="promotion" style="text-align: center">
+			<h2>Promotion Detail - {{promotion.name}} [{{promotion.id}}]</h2>
+			<span>Product Description: {{promotion.description}}</span><br>
+			<span>Status: {{promotion.active}}</span><br> <span>Promotion
+				Type: {{promotion.type}}</span><br>
+		</div>
+	</div>
+</div>
+
+
+
+

@@ -1,0 +1,21 @@
+down vote
+accepted
+Apply this class to it
+
+
+.selected {
+	background-color: #EEEEEE;
+}
+
+ul {
+	list-style: none;
+	text-color: black;
+}
+
+ul li:before {
+	content: '✓';
+}
+
+ul na:before {
+	content: '✓';
+}
