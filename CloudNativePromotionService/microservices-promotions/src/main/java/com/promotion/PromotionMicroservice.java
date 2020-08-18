@@ -1,6 +1,7 @@
 package com.promotion;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +34,8 @@ public class PromotionMicroservice {
 	@RequestMapping(value = "/getPromotionById/{promotionId}")
 	@ResponseBody
 	public Promotion getPromotionById(@PathVariable String promotionId){
-		return promotionRepository.findOne(promotionId);
+		Optional<Promotion> promotion = promotionRepository.findById(promotionId);
+		return promotion.isPresent() ? promotion.get() : null;
 	}
 
 	@RequestMapping(value = "/getALLPromotions")
