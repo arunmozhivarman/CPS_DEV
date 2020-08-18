@@ -1,18 +1,19 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.8.RELEASE'
+		springBootVersion = '2.2.2.RELEASE'
 	}
 	repositories {
 		mavenCentral()
 	}
 	dependencies {
+		classpath("io.spring.gradle:dependency-management-plugin:1.0.9.RELEASE")
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
 apply plugin: 'war'
 
 group = 'com.cloud'
@@ -25,7 +26,7 @@ repositories {
 
 
 ext {
-	springCloudVersion = 'Edgware.RELEASE'
+	springCloudVersion = 'Hoxton.SR1'
 }
 
 dependencies {
